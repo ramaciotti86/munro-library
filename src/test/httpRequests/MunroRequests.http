@@ -1,9 +1,9 @@
 ###
 ### Hill Category TOP
-GET http://localhost:8080/munros/Munro Top
+GET http://localhost:8080/munros?category=TOP
 
 ### Hill Category MUN
-GET http://localhost:8080/munros/Munro
+GET http://localhost:8080/munros?category=MUN
 
 ### Hill Category MUN
-GET http://localhost:8080/munros/
+GET http://localhost:8080/munros?category=
