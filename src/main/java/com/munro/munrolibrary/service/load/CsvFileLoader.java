@@ -1,4 +1,4 @@
-package com.munro.munrolibrary.bean;
+package com.munro.munrolibrary.service.load;
 
 import com.munro.munrolibrary.model.Munro;
 import com.opencsv.CSVReader;
@@ -16,14 +16,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class CsvLoadBean {
+public class CsvFileLoader implements ILoader{
 
-    public static List<Munro> originalMunroList = new ArrayList<>();
+    public List<Munro> munros = new ArrayList<>();
 
     @PostConstruct
-    public void init() {
+    private void init() {
         List<Munro> allMunros = new ArrayList<>();
-        URL resource = CsvLoadBean.class.getClassLoader().getResource("munrotab_v6.2.csv");
+        URL resource = CsvFileLoader.class.getClassLoader().getResource("munrotab_v6.2.csv");
         try {
             File file = new File(resource.toURI());
             FileReader fileReader = new FileReader(file);
@@ -41,6 +41,10 @@ public class CsvLoadBean {
         } catch (IOException | URISyntaxException | CsvException e) {
             e.printStackTrace();
         }
-        originalMunroList.addAll(allMunros);
+        munros.addAll(allMunros);
+    }
+
+    public List<Munro> getMunros(){
+        return munros;
     }
 }

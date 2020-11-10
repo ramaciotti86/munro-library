@@ -1,4 +1,7 @@
 ###
+### All null values
+GET http://localhost:8080/munros
+
 ### Hill Category TOP
 GET http://localhost:8080/munros?category=TOP
 
@@ -17,7 +20,8 @@ GET http://localhost:8080/munros?min=900&max=930
 ### limit
 GET http://localhost:8080/munros?limit=10
 
-### All null values
-GET http://localhost:8080/munros
+### sort=name,ASC&sort=height=DESC
+GET http://localhost:8080/munros?sort=name,ASC&sort=height=DESC
 
-### sort
+### sort=height,ASC&sort=name=DESC
+GET http://localhost:8080/munros?sort=height,ASC&sort=name=DESC

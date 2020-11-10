@@ -20,9 +20,6 @@ public class MunroController {
         this.munroService = munroService;
     }
 
-    //localhost:8080/munros?category=MUN&min=10&max=45&height=DESC&name=DESC&limit=30
-
-    //@RequestMapping(method = RequestMethod.GET, path = "/munros", name = "getMunroByFilter", produces = {MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
     @RequestMapping(method = RequestMethod.GET, path = "/munros", name = "getMunroByFilter", produces = {MediaType.APPLICATION_JSON_VALUE})
     public List<Munro> getMunroByFilter(@RequestParam(value = "category", required = false) String[] category,
                                         @RequestParam(value = "min", required = false) Double min,
