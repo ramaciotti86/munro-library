@@ -2,8 +2,22 @@
 ### Hill Category TOP
 GET http://localhost:8080/munros?category=TOP
 
-### Hill Category MUN
-GET http://localhost:8080/munros?category=MUN
+### Hill Category MUN,TOP
+GET http://localhost:8080/munros?category=MUN,TOP
 
-### Hill Category MUN
-GET http://localhost:8080/munros?category=
+### min
+GET http://localhost:8080/munros?min=926.2
+
+### max
+GET http://localhost:8080/munros?max=926.5
+
+### min and max
+GET http://localhost:8080/munros?min=900&max=930
+
+### limit
+GET http://localhost:8080/munros?limit=10
+
+### All null values
+GET http://localhost:8080/munros
+
+### sort
