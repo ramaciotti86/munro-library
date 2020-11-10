@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 @Validated
@@ -29,9 +27,8 @@ public class MunroController {
     public List<Munro> getMunroByFilter(@RequestParam(value = "category", required = false) String[] category,
                                         @RequestParam(value = "min", required = false) Double min,
                                         @RequestParam(value = "max", required = false) Double max,
-                                        @RequestParam(value = "height", required = false) String height, //ASC or DESC
-                                        @RequestParam(value = "name", required = false) String name, //ASC or DESC
+                                        @RequestParam(value = "sort", required = false) String[] sort, //name and height (ASC or DESC)
                                         @RequestParam(value = "limit", required = false) Integer limit){
-        return munroService.getMunroListByFilter(category, min, max, height, name, limit);
+        return munroService.getMunroListByFilter(category, min, max, sort, limit);
     }
 }

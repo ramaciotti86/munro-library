@@ -6,10 +6,7 @@ import com.munro.munrolibrary.service.validation.MunroValidation;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -19,7 +16,7 @@ public class MunroService {
 
     private MunroValidation munroValidation;
 
-    public List<Munro> getMunroListByFilter(String[] categories, Double min, Double max, String height, String name,
+    public List<Munro> getMunroListByFilter(String[] categories, Double min, Double max, String[] sort,
                                             Integer limit) {
         //Validation of Min, max params
         munroValidation.validate(min, max);
