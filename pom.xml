@@ -17,6 +17,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<lombok.version>1.18.12</lombok.version>
+		<junit.version>5.7.0</junit.version>
 	</properties>
 
 	<dependencies>
@@ -60,13 +61,13 @@
 			<version>5.3</version>
 		</dependency>
 
-
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
-		<!-- Content Negotiation - Support for XML -->
-		<!--<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>
-			<artifactId>jackson-dataformat-xml</artifactId>
-		</dependency>-->
+		<!-- JUnit Tests -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 

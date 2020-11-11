@@ -5,17 +5,18 @@ The goal of this solution is to create a simple API which other software can use
 
 What did I use in this project
 --------------------------
-* @RequestMapping
-* @Configuration
-  * Load CSV File once (CsvLoadConfig)
+* Spring
 * Lombok
   * turn dev life easier :)
   * lombok.config at root folder
-* Content Negotiation - Support for Response Content Type as JSON and XML
-  * find the dependency on pom.xml - jackson-dataformat-xml 
+* Junit
+  * Just a few tests but I could right tests to controller and service  
 * HTTP Requests
   * find requests under "test/httpRequests"
 
 Findings
 --------------------------
-<p>My findings while developing this app </p>
+<p>I found very interesting to create this app as I could develop more in java using some functionalities that we can use in everyday work.</p>
+<p>The project and the challenge to develop using functional approach and using CSV as "DB" makes you think in how could we approach the solution in different ways.</p>
+<p>Any questions, please, dont hesitate to ask. :) </p>
+<p>I appreciate the opportunity and hope to hear from you soon.</p>
