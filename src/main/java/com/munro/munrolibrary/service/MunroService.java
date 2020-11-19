@@ -41,8 +41,8 @@ public class MunroService {
         return allMunros.stream()
                 .filter(categoryPredicates.stream().reduce(x -> false, Predicate::or))
                 .filter(heightPredicates.stream().reduce(x -> true, Predicate::and))
-                .limit(limit != null ? limit : allMunros.size())
                 .sorted(ComparatorUtils.chainedComparator(comparators))
+                .limit(limit != null ? limit : allMunros.size())
                 .collect(Collectors.toList());
     }
 }

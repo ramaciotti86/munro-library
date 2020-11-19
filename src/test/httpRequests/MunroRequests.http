@@ -20,8 +20,20 @@ GET http://localhost:8080/munros?min=900&max=930
 ### limit
 GET http://localhost:8080/munros?limit=10
 
-### sort=name,ASC&sort=height=DESC
-GET http://localhost:8080/munros?sort=name,ASC&sort=height,DESC
+### sort=name-ASC
+GET http://localhost:8080/munros?sort=name-ASC
 
-### sort=height,ASC&sort=name=DESC
-GET http://localhost:8080/munros?sort=height,ASC&sort=name,DESC
+### sort=height-DESC
+GET http://localhost:8080/munros?sort=height-DESC
+
+### sort=name-ASC&sort=height-DESC
+GET http://localhost:8080/munros?sort=name-ASC&sort=height-DESC
+
+### sort=height-ASC&sort=name-DESC
+GET http://localhost:8080/munros?sort=height-ASC&sort=name-DESC
+
+### sort=height-DESC&sort=name-DESC&limit=5
+GET http://localhost:8080/munros?sort=height-DESC&sort=name-DESC&limit=5
+
+### sort=height-DESC&sort=name-DESC
+GET http://localhost:8080/munros?sort=height-DESC&sort=name-DESC

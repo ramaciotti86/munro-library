@@ -15,22 +15,22 @@ public class SortManager {
         List<Comparator<Munro>> comparators = new ArrayList<>();
 
         Optional.ofNullable(sort).map(x -> {
-            for (String sortElement : sort) {
-                String[] element = sortElement.split(",");
-                if (element[0].equals("name")) {
-                    if (element[1].equals("ASC")) {
-                        comparators.add(Comparator.comparing(Munro::getName));
-                    } else if (element[1].equals("DESC")) {
-                        comparators.add(Comparator.comparing(Munro::getName).reversed());
-                    }
-                } else if (element[0].equals("height")) {
-                    if (element[1].equals("ASC")) {
-                        comparators.add(Comparator.comparing(Munro::getHeight));
-                    } else if (element[1].equals("DESC")) {
-                        comparators.add(Comparator.comparing(Munro::getHeight).reversed());
+                for (String sortElement : sort) {
+                    String[] element = sortElement.split("-");
+                    if (element[0].equals("name")) {
+                        if (element[1].equals("ASC")) {
+                            comparators.add(Comparator.comparing(Munro::getName));
+                        } else if (element[1].equals("DESC")) {
+                            comparators.add(Comparator.comparing(Munro::getName).reversed());
+                        }
+                    } else if (element[0].equals("height")) {
+                        if (element[1].equals("ASC")) {
+                            comparators.add(Comparator.comparing(Munro::getHeight));
+                        } else if (element[1].equals("DESC")) {
+                            comparators.add(Comparator.comparing(Munro::getHeight).reversed());
+                        }
                     }
                 }
-            }
             return comparators;
         }).orElseGet(() -> {
             comparators.add(Comparator.comparing(Munro::getName));
