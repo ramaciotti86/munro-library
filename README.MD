@@ -19,4 +19,3 @@ Findings
 <p>I found very interesting to create this app as I could develop more in java using some functionalities that we can use in everyday work.</p>
 <p>The project and the challenge to develop using functional approach and using CSV as "DB" makes you think in how could we approach the solution in different ways.</p>
 <p>Any questions, please, dont hesitate to ask. :) </p>
-<p>I appreciate the opportunity and hope to hear from you soon.</p>
